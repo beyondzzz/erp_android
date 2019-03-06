@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/trans_20px"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/trans_25px"
+        android:layout_marginTop="@dimen/trans_35px"
+        android:layout_marginRight="@dimen/trans_25px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unit_name"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_30px"
+
+            />
+
+        <TextView
+            android:id="@+id/text_unit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="北京市什么什么什么有限公司"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_30px" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/trans_35px"
+        android:layout_marginLeft="@dimen/trans_25px"
+        android:layout_marginRight="@dimen/trans_25px"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxpayer_identification_number"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_30px"
+
+            />
+
+        <TextView
+            android:id="@+id/text_taxpayer_identification_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="123456789112"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_30px" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_20px"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/trans_25px"
+        android:layout_marginBottom="@dimen/trans_25px"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/general_unit_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/general_invoice_edit_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_address_edit"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/trans_15px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/trans_666666"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/trans_60px"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/general_invoice_del_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_address_del"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/trans_15px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/trans_666666"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/trans_35px"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

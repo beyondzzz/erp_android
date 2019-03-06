@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ashenBackgroundColor"
+    android:orientation="vertical"
+    android:id="@+id/user_name_setting_page">
+
+    <RelativeLayout
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/icon_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/user_name_settings"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+        <TextView
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ok"
+            android:textColor="@color/trans_666666"
+            android:textSize="@dimen/text_trans_27px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/user_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/trans_55px"
+            android:paddingLeft="@dimen/trans_55px"
+            android:paddingRight="@dimen/trans_35px"
+            android:paddingTop="@dimen/trans_55px"
+            android:text="用户名"
+            android:textColor="@color/trans_666666"
+            android:textSize="@dimen/text_trans_32px" />
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/input_del_img"
+            android:layout_toRightOf="@+id/user_name_title"
+            android:background="@null"
+            android:hint="请输入用户名"
+            android:textColor="@color/trans_666666"
+            android:textSize="@dimen/text_trans_32px"
+            android:maxLength="20"
+            />
+
+        <ImageView
+            android:id="@+id/input_del_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginRight="@dimen/trans_35px"
+            android:src="@drawable/input_del" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/trans_35px"
+        android:text="2-20个字符，可由中英文、数字、“_”、“-”组成，只能由中英文开头。"
+        android:textColor="@color/moreText"
+        android:textSize="@dimen/text_trans_27px" />
+</LinearLayout>

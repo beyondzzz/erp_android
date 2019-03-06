@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/trans_360px"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/trans_15px"
+        android:paddingLeft="@dimen/trans_14px"
+        android:paddingRight="@dimen/trans_14px">
+        <ImageView
+            android:id="@+id/goods_img"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/trans_170px"
+            android:src="@drawable/img_mushroom"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/trans_60px"
+            android:layout_marginBottom="@dimen/trans_15px"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="正经香菇20kg 野生限时特价，更多优..."
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_trans_22px"
+                android:lines="1"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/old_goods_price"
+                android:text="¥"
+                android:textColor="@color/orangePriceColor"
+                android:textSize="@dimen/text_trans_30px" />
+
+            <TextView
+                android:id="@+id/goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/price_unit"
+                android:layout_above="@+id/old_goods_price"
+                android:text="16.8"
+                android:textColor="@color/orangePriceColor"
+                android:textSize="@dimen/text_trans_30px" />
+            <TextView
+                android:id="@+id/old_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="¥284.04"
+                android:textColor="@color/font_grey"
+                android:textSize="@dimen/text_trans_24px" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/goods_price"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/btn_black"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

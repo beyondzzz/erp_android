@@ -1,0 +1,214 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    //签名，用于打包
+     signingConfigs {
+         release {
+             keyAlias 'btc'
+             keyPassword '123456'
+             storeFile file('btc.jks')
+             storePassword '123456'
+             v2SigningEnabled false
+         }
+
+//         debug {
+//             keyAlias 'btc'
+//             keyPassword '123456'
+//             storeFile file('btc.jks')
+//             storePassword '123456'
+//             v2SigningEnabled false
+//         }
+     }
+    compileSdkVersion 27
+//    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.jl.jlapp"//你自己的包名
+        minSdkVersion 18
+        targetSdkVersion 27
+        versionCode 43
+        versionName "6.3.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+        multiDexEnabled true
+    }
+
+    //使用1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //shrinkResources true
+        }
+
+    }
+    sourceSets {
+
+        main {
+
+            res.srcDirs = ['src/main/res']
+
+            assets.srcDirs = ['src/main/assets']
+
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+
+            jni.srcDirs = []
+
+            jniLibs.srcDirs = ['src/main/libs']
+
+        }
+
+    }
+    repositories { flatDir { dirs 'libs' } }
+    dataBinding {
+        enabled true
+    }
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+}
+greendao {
+    //版本号，升级时可配置,对应当前数据库版本
+    schemaVersion 1
+    //由GreenDao自动生成代码所在的包名，默认的是在项目包下面新建一个gen
+    daoPackage 'com.gqfbtc.greenDB'//自己包名下greenDB目录
+    //设置自动生成代码的目录
+    targetGenDir 'src/main/java'
+}
+dependencies {
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:design:27.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    //框架
+    implementation project(':mybaselibrary')
+
+    //工具类集合 https://github.com/haoma2012/AndroidUtils
+    implementation 'com.blankj:utilcode:1.8.3'
+
+    //导航栏
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    //轮播图
+    implementation 'cn.bingoogolapple:bga-banner:2.1.7@aar'
+
+    //圆角imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //通用开关按钮 https://github.com/kyleduo/SwitchButton
+    implementation 'com.kyleduo.switchbutton:library:1.4.6'
+
+    //评分
+    implementation 'com.hedgehog.ratingbar:app:1.1.2'
+
+    //数据库
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    //
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife-compiler:8.8.1'
+//    compile 'com.android.support:recyclerview-v7:27.0.0-alpha1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //jyq
+    implementation 'com.youth.banner:banner:1.4.10'
+
+//        implementation 'com.zaaach:citypicker:2.0.1'
+    implementation 'com.bm.photoview:library:1.4.1'
+
+    //最新版本
+    implementation 'com.github.yaozs:ImageShowPicker:1.0.0'
+
+    //最新版本
+    implementation 'com.zhihu.android:matisse:0.4.3'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    //解决库依赖冲突问题
+    androidTestImplementation 'com.google.code.findbugs:jsr305:3.0.1'
+
+    /** okhttp    **/
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    //rx支持
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+    //网络请求
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    //retrofit2请求结果转换
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation('com.squareup.retrofit2:adapter-rxjava2:2.3.0') {
+        exclude module: 'rxjava2'
+    }
+
+    //   状态栏颜色
+    implementation 'com.jaeger.statusbaruitl:library:1.3.5'
+
+    //常量类
+    implementation 'com.blankj:utilcode:1.3.6'
+
+    //qq
+    implementation files('src/main/libs/open_sdk_r5990_lite.jar')
+
+    /**
+     * 微信登录分享支付等。。
+     */
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation project(':citypicker')
+    /**
+     * 支付宝 SDK
+     */
+
+    implementation files('src/main/libs/alipaySdk-20180403.jar')
+}
+//密钥库类型: JKS
+//密钥库提供方: SUN
+//
+//您的密钥库包含 1 个条目
+//
+//别名: btc
+//创建日期: 2017-10-14
+//条目类型: PrivateKeyEntry
+//证书链长度: 1
+//证书[1]:
+//所有者: CN=btc, OU=btc, O=btc, L=btc, ST=btc, C=btc
+//发布者: CN=btc, OU=btc, O=btc, L=btc, ST=btc, C=btc
+//序列号: 636c2474
+//有效期开始日期: Sat Oct 14 10:15:20 CST 2017, 截止日期: Wed Oct 08 10:15:20 CST 2042
+//证书指纹:
+//MD5: A9:58:CA:34:D7:3B:66:20:D8:94:30:41:BF:14:25:86
+//SHA1: 75:A8:11:57:C4:47:5B:52:2A:A8:0D:A9:44:9E:87:E0:2C:F0:91:1E
+//SHA256: BD:BB:55:B0:34:63:CF:AD:B7:DC:60:B8:F7:76:CF:1B:B5:7E:F8:DF:F3:11:B2:77:63:E8:2E:C0:5F:EB:D7:AB
+//签名算法名称: SHA256withRSA
+//版本: 3
+//
+//扩展:
+//
+//#1: ObjectId: 2.5.29.14 Criticality=false
+//SubjectKeyIdentifier [
+//        KeyIdentifier [
+//                0000: 33 3A 7F E2 87 3D 24 C5   8C D7 3D 96 EB AF 65 05  3:...=$...=...e.
+//                0010: 87 7E 56 FA                                        ..V.
+//                ]
+//        ]

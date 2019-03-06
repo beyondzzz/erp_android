@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ashenBackgroundColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/invoice_fragment">
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/lrv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/add_general_invoice_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/trans_20px"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:background="@drawable/btn_green_large"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_add_bill"
+            android:drawablePadding="@dimen/trans_45px"
+            android:text="添加普票资质"
+            android:textColor="@color/checkGreenColor"
+            android:textSize="@dimen/text_trans_27px" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_invoice_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_green_large"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/trans_385px">
+            <TextView
+                android:id="@+id/add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_add_bill"
+                android:drawablePadding="@dimen/trans_45px"
+                android:text="添加增票资质"
+                android:textColor="@color/checkGreenColor"
+                android:textSize="@dimen/text_trans_27px" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/vat_invoice_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trans_100px"
+            android:background="@color/state_pass"
+            android:textSize="@dimen/text_trans_24px"
+            android:text="已通过审核"
+            android:textColor="@color/textColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/trans_40px"
+            android:drawableLeft="@drawable/checkmark_green"
+            android:drawablePadding="@dimen/trans_25px"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/trans_20px"
+                    android:paddingRight="@dimen/trans_20px">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="单位名称"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/unitName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_80px"
+                            android:text="北京饿了么股份有限公司"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="纳税人识别码"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/taxpayerIdentificationNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_29px"
+                            android:text="1234567890111X"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="注册地址"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/registeredAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_80px"
+                            android:layout_marginRight="@dimen/trans_95px"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="北京市海淀区学院路35号北航世宁"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="注册电话"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/registeredTel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_80px"
+                            android:text="0******1"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="开户银行"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/depositBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_80px"
+                            android:text="中国银行九龙山支行"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/trans_100px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_5px"
+                            android:text="银行账户"
+                            android:textColor="@color/font_grey"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <TextView
+                            android:id="@+id/bankAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_80px"
+                            android:text="1******2"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cutOffrule" />
+                </LinearLayout>
+                <TextView
+                    android:paddingLeft="@dimen/trans_20px"
+                    android:paddingRight="@dimen/trans_20px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="增票资质文件"
+                    android:layout_marginTop="@dimen/trans_35px"
+                    android:textColor="@color/font_grey"
+                    android:textSize="@dimen/text_trans_27px" />
+                <ImageView
+                    android:id="@+id/vat_pic"
+                    android:layout_width="@dimen/trans_150px"
+                    android:layout_height="@dimen/trans_150px"
+                    android:layout_marginTop="@dimen/trans_10px"
+                    android:paddingLeft="@dimen/trans_30px"
+                    android:paddingRight="@dimen/trans_30px"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/trans_20px"
+                    android:layout_marginRight="@dimen/trans_55px"
+                    android:layout_marginTop="@dimen/trans_45px"
+                    android:layout_marginBottom="@dimen/trans_45px">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_tip_sm"
+                        android:layout_marginRight="@dimen/trans_15px"
+                        android:layout_marginTop="@dimen/trans_3px"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/checkGreenColor"
+                        android:textSize="@dimen/text_trans_24px"
+                        android:text="本页面信息仅供增值税专用发票资质审核使用，切勿进行支付相关业务，谨防上当受骗。"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/trans_45px">
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_trans_27px"
+                android:background="@drawable/btn_gray"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="@dimen/trans_65px"
+                android:layout_height="wrap_content"
+                android:text=""/>
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_trans_27px"
+                android:background="@drawable/btn_gray"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

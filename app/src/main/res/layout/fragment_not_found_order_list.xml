@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jl.jlapp.mvp.fragment.NotFoundOrderListFragment"
+    android:background="@color/ashenBackgroundColor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_order"
+        android:drawableTop="@drawable/icon_noorder"
+        android:drawablePadding="@dimen/trans_50px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/trans_200px"
+        android:textColor="@color/no_data_ashen"
+        android:textSize="@dimen/text_trans_32px"
+        />
+
+</FrameLayout>

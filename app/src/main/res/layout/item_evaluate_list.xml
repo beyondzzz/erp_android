@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/trans_20px"
+    android:paddingRight="@dimen/trans_20px"
+    android:paddingTop="@dimen/trans_30px"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_24px"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_user_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_toRightOf="@id/tv_user"
+            android:text="18860232517"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_24px"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_25px"
+            android:layout_toRightOf="@+id/tv_user_num"
+            android:src="@drawable/btn_vip" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2018-1-20"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/moreText"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/evaluation_grade_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/rl_title"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/trans_10px"
+        >
+
+        <ImageView
+            android:id="@+id/evaluation_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_star_yellow_s"
+            android:layout_marginRight="@dimen/trans_15px"/>
+
+        <ImageView
+            android:id="@+id/evaluation_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/trans_15px"
+            android:src="@drawable/icon_star_yellow_s" />
+
+        <ImageView
+            android:id="@+id/evaluation_star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/trans_15px"
+            android:src="@drawable/icon_star_yellow_s" />
+
+        <ImageView
+            android:id="@+id/evaluation_star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/trans_15px"
+            android:src="@drawable/icon_star_yellow_s" />
+
+        <ImageView
+            android:id="@+id/evaluation_star5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/trans_15px"
+            android:src="@drawable/icon_star_gray_s" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_evaluate_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/evaluation_grade_star"
+        android:text="的撒娇空间的积案活动教案或点击哈得好好觉得撒娇大街上到货计划的飞机撒等哈"
+        android:textColor="@color/trans_333333"
+        android:textSize="@dimen/text_trans_27px"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:lineSpacingExtra="@dimen/trans_5px"
+        android:layout_marginBottom="@dimen/trans_10px"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/evaluation_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/trans_20px"
+        android:paddingTop="@dimen/trans_10px"
+        android:layout_below="@+id/tv_evaluate_detail"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/evaluation_img"
+        android:background="@color/light_gray" />
+</RelativeLayout>

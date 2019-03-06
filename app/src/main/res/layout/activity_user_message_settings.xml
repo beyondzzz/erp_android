@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/my">
+
+    <RelativeLayout
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/icon_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text_user_message_settings"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/user_pic_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingRight="@dimen/trans_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="头像"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_32px" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/trans_95px"
+            android:layout_height="@dimen/trans_95px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/trans_30px"
+            android:layout_toLeftOf="@id/icon_arrows"
+            android:src="@drawable/icon_user_img" />
+
+        <ImageView
+            android:id="@+id/icon_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_return_meaage" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_20px"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/trans_40px"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingRight="@dimen/trans_30px"
+        android:paddingTop="@dimen/trans_40px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="账号"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_32px" />
+
+        <TextView
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="11111111111"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/moreText"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_20px"
+        />
+
+    <RelativeLayout
+        android:id="@+id/user_name_settings_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/trans_40px"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingRight="@dimen/trans_30px"
+        android:paddingTop="@dimen/trans_40px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="用户名"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_32px" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/moreText"
+            android:text="xxxxxx"
+            android:layout_toLeftOf="@id/user_name_arrows"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/trans_30px"
+            />
+
+        <ImageView
+            android:id="@+id/user_name_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_return_meaage" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_20px"
+        />
+
+</LinearLayout>

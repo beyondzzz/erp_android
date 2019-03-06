@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/trans_20px"
+    android:layout_marginBottom="@dimen/trans_20px"
+    >
+
+    <RadioButton
+        android:id="@+id/rb_company_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableLeft="@drawable/bk_checked"
+        android:drawablePadding="@dimen/dp_10"
+        android:text="@string/app_name"
+        android:textSize="@dimen/text_trans_27px"
+        android:textColor="@color/trans_333333"
+        />
+
+    <TextView
+        android:id="@+id/tv_nummber_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_company_item"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:text="@string/taxpayer_identification_number"
+        android:textSize="@dimen/text_trans_27px"
+        android:textColor="@color/trans_333333"/>
+
+    <TextView
+        android:id="@+id/tv_nummber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_company_item"
+        android:layout_toRightOf="@id/tv_nummber_name"
+        android:layout_marginLeft="@dimen/trans_10px"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/app_name"
+        android:textSize="@dimen/text_trans_27px"
+        android:textColor="@color/trans_333333"/>
+</RelativeLayout>

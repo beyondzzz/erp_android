@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jl.jlapp.mvp.activity.MessageCenterActivity">
+
+    <RelativeLayout
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/icon_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/message_center"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+        <ImageView
+            android:id="@+id/message_setting_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_message_setting" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule" />
+
+    <RelativeLayout
+        android:id="@+id/user_service_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/trans_20px"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingTop="@dimen/trans_10px">
+
+        <RelativeLayout
+            android:id="@+id/service_img_rela"
+            android:layout_width="@dimen/trans_105px"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/service_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/trans_10px"
+                android:src="@drawable/icon_servise" />
+
+            <TextView
+                android:id="@+id/service_message_no_read_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_round_red"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_trans_24px"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_20px"
+            android:layout_toRightOf="@id/service_img_rela"
+            android:text="@string/user_service"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_27px" />
+
+        <TextView
+            android:id="@+id/service_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/service_img_rela"
+            android:layout_marginBottom="@dimen/trans_10px"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_toRightOf="@id/service_img_rela"
+            android:text="点击查看您与客服的沟通记录"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px" />
+
+       <!-- <TextView
+            android:id="@+id/service_last_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/user_service"
+            android:layout_marginRight="@dimen/trans_25px"
+            android:text="7月10日"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px" />-->
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/trans_20px"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:background="@color/cutOffRule" />
+
+    <RelativeLayout
+        android:id="@+id/order_message_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/trans_20px"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingTop="@dimen/trans_10px">
+
+        <RelativeLayout
+            android:id="@+id/order_message_img_rela"
+            android:layout_width="@dimen/trans_105px"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/order_message_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/trans_10px"
+                android:src="@drawable/icon_order" />
+
+            <TextView
+                android:id="@+id/order_message_no_read_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_round_red"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_trans_24px"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/order_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_20px"
+            android:layout_toRightOf="@id/order_message_img_rela"
+            android:text="@string/order_message"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_27px" />
+
+        <TextView
+            android:id="@+id/order_no_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/order_message_img_rela"
+            android:layout_marginBottom="@dimen/trans_10px"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_toRightOf="@id/order_message_img_rela"
+            android:text="暂无消息"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/order_has_message_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/order_message_img_rela"
+            android:layout_toRightOf="@id/order_message_img_rela"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_10px"
+                android:layout_marginLeft="@dimen/trans_35px"
+                android:text="订单号:【"
+                android:textColor="@color/moreText"
+                android:textSize="@dimen/text_trans_27px" />
+
+            <TextView
+                android:id="@+id/last_order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_10px"
+                android:text="订单号"
+                android:textColor="@color/moreText"
+                android:textSize="@dimen/text_trans_27px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_10px"
+                android:text="】"
+                android:textColor="@color/moreText"
+                android:textSize="@dimen/text_trans_27px" />
+            <TextView
+                android:id="@+id/last_order_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_10px"
+                android:text="有新状态"
+                android:textColor="@color/moreText"
+                android:textSize="@dimen/text_trans_27px"
+                android:maxEms="4"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/order_last_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/order_message"
+            android:layout_marginRight="@dimen/trans_25px"
+            android:text="7月10日"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/trans_20px"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:background="@color/cutOffRule" />
+
+    <RelativeLayout
+        android:id="@+id/activity_message_rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/trans_20px"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingTop="@dimen/trans_10px">
+
+        <RelativeLayout
+            android:id="@+id/activity_message_img_rela"
+            android:layout_width="@dimen/trans_105px"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/activity_message_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/trans_10px"
+                android:src="@drawable/icon_activy" />
+
+            <TextView
+                android:id="@+id/activity_message_no_read_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_round_red"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_trans_24px"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/activity_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_20px"
+            android:layout_toRightOf="@id/activity_message_img_rela"
+            android:text="@string/activity_message"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_27px" />
+
+        <TextView
+            android:id="@+id/last_activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/activity_message_img_rela"
+            android:layout_marginBottom="@dimen/trans_10px"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_toRightOf="@id/activity_message_img_rela"
+            android:text="活动标签"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px" />
+
+        <TextView
+            android:id="@+id/activity_no_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/activity_message_img_rela"
+            android:layout_marginBottom="@dimen/trans_10px"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_toRightOf="@id/activity_message_img_rela"
+            android:text="暂无消息"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/activity_last_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/activity_message"
+            android:layout_marginRight="@dimen/trans_25px"
+            android:text="7月10日"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_27px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/trans_20px"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:background="@color/cutOffRule" />
+</LinearLayout>

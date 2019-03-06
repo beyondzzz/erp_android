@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">JlApp</string>
+    <string name="title_activity_search_goods_list">SearchGoodsListActivity</string>
+
+    <!--商品列表页-->
+    <string name="input_search_text">请输入商品名称</string>
+    <string name="search_text">筛选</string>
+    <string name="synthesized">综合</string>
+    <string name="saleNum">销量</string>
+    <string name="price">价格</string>
+    <string name="brand">品牌</string>
+    <string name="ok">确定</string>
+    <string name="reset">重置</string>
+    <string name="search_goods_list_error">抱歉，未搜索到您想要的商品</string>
+    <string name="search_goods_detail_error">抱歉，该商品已不存在。</string>
+
+    <string name="classify_name">分类</string>
+
+    <!--侧滑-->
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="goods_filter">商品筛选</string>
+    <string name="only_look_has_goods">仅看有货</string>
+    <string name="price_range">价格区间</string>
+    <string name="max_price">最高价</string>
+    <string name="min_price">最低价</string>
+    <string name="all">全部</string>
+
+    <!--我的订单页面-->
+    <string name="my_order">我的订单</string>
+    <string name="for_the_payment">待支付</string>
+    <string name="to_send_the_goods">待发货</string>
+    <string name="for_the_goods">待收货</string>
+    <string name="has_been_completed">已完成</string>
+    <string name="in_the_after_sale">售后中</string>
+    <string name="has_been_cancelled">已取消</string>
+    <string name="has_closed">已关闭</string>
+    <string name="pay_money">支付</string>
+    <string name="order_tracking">订单跟踪</string>
+    <string name="once_again_to_buy">再次购买</string>
+    <string name="evaluation_of_printing">评价晒单</string>
+    <string name="evaluation_detail">评价详情</string>
+    <string name="no_order">暂无订单</string>
+
+    <string name="no_coupon">暂无优惠券信息</string>
+
+    <string name="text_invoice_prompt">温馨提示&#160;:&#160;开企业抬头的发票&#160;,&#160;需填写对应的"纳税人识别号"&#160;,以免影响您的发票报销。</string>
+    <string name="text_invoice_type">发票类型</string>
+    <string name="text_ordinary_invoice">普通发票</string>
+    <string name="text_added_invoice">增值税专用发票</string>
+    <string name="text_no_invoice">不开发票</string>
+    <string name="text_invoice_rise">发票抬头</string>
+    <string name="text_add_commpny">新增单位</string>
+    <string name="save">保存</string>
+    <string name="text_submit_order">温馨提示&#160;:&#160;您的订单已经超过支付限额&#160;,&#160;我们将进行订单拆分&#160;,&#160;您需按照拆分后的订单依次支付&#160;,&#160;若因此给您带来不便&#160;,&#160;我们深感歉意&#160;!</string>
+    <string name="text_submit_order_money_5">您的订单已超过线上支付限额，提交订单后请进行线下支付，若因此给您带来不便，我们深感歉意！</string>
+    <string name="text_submit_order_presell">您的订单中含有预售商品，预售商品的送货时间以商家到货为准，感谢您的支持！</string>
+
+    <!-- 购物车页面 -->
+    <string name="shop_cart">购物车</string>
+    <string name="edit">编辑</string>
+    <string name="accomplish">完成</string>
+    <string name="foot_up">结算</string>
+    <string name="to_gather_together_the_single">去凑单 ></string>
+    <string name="more">更多 ></string>
+    <string name="delete">删除</string>
+    <string name="no_goods">无货</string>
+    <string name="shop_cart_no_goods">购物车竟然是空的</string>
+    <string name="return_home">返回首页</string>
+    <string name="to_seconds_kill">逛逛秒杀</string>
+    <string name="RMB">¥</string>
+    <string name="goods_no">商品编号:</string>
+    <string name="color">颜色</string>
+    <string name="specification">规格:</string>
+
+    <string name="search">搜索</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search_history_clear">清空搜索历史</string>
+    <string name="cancel">取消</string>
+    <string name="sure_to_empty_search_history">确定清空搜索历史吗？</string>
+
+    //商品详情页
+    <string name="sales_promotion">促销</string>
+    <string name="is_choose">已选</string>
+    <string name="send_to">送至</string>
+    <string name="note">注:</string>
+    <string name="evaluation">评价</string>
+    <string name="percent">%</string>
+    <string name="high_praise_percent">好评率</string>
+    <string name="search_all_evaluation">查看全部评价</string>
+    <string name="user">用户</string>
+    <string name="kind">种类</string>
+    <string name="number">数量</string>
+    <string name="delivery_to">配送至</string>
+
+    <string name="text_good_rate">好评率\u0020\u0020%1$s</string>
+    <string name="evaluation_bask">评价晒单</string>
+    <string name="submit">提交</string>
+    <string name="grade">评分</string>
+    <string name="evaluation_max_world">/200</string>
+    <string name="evaluation_point">最多上传5张图片，仅支持jpg、jpeg、png、bmp格式，单张不超过5M</string>
+    <string name="center_evaluation">评价中心</string>
+
+
+    <string name="img_add">添加照片</string>
+    <string name="no_evaluation">暂无评价</string>
+
+    <string name="sure_to_delete">确定删除吗？</string>
+    <string name="write_order">订单填写</string>
+    <string name="sure_to_cancel_order">订单取消后不可恢复，是否确认取消订单？</string>
+    <string name="apply_success">售后申请已提交，售后客服可能与您电话沟通，请保持手机畅通！</string>
+    <string name="sure_to_delete_order">订单删除后不可恢复，是否确认删除订单？</string>
+    <string name="choose_address">选择地址</string>
+
+    <string name="invoice_choose">选择发票信息</string>
+
+    <string name="taxpayer_identification_number">纳税人识别号：</string>
+
+    <string name="coupon_use_msg">优惠券使用情况</string>
+    <string name="coupon_explanation">(优惠券说明)</string>
+    <string name="management">管理</string>
+    <string name="coupon_center">领券中心</string>
+    <string name="vat_invoice_aptitude">增票资质</string>
+
+    <string name="activity_join">活动参与情况</string>
+
+    <string name="text_pay_money">支付金额&#160;:&#160;</string>
+    <string name="text_pay_type">请选择支付方式</string>
+    <string name="stv_wechat_pay">微信支付</string>
+    <string name="stv_alipay">支付宝支付</string>
+    <string name="stv_union_pay">银联支付</string>
+    <string name="stv_underline_pay">线下支付</string>
+    <string name="text_submit">提交</string>
+    <string name="text_result_success">支付成功</string>
+    <string name="title_activity_underline">UnderlineActivity</string>
+
+    <!--发票-->
+    <string name="state_pass">已通过审核</string>
+
+
+    <string name="settings">设置</string>
+    <string name="text_user_message_settings">个人信息设置</string>
+    <string name="user_name_settings">用户名设置</string>
+    <string name="message_settings">消息设置</string>
+    <string name="message_center">消息中心</string>
+    <string name="user_name">用户名</string>
+
+    <string name="text_photograph">拍照</string>
+    <string name="text_gallery">从相册中选取</string>
+
+    <string name="content_to_request_permission">保证应用正常运行，请授予必要权限！</string>
+    <string name="attention">提示</string>
+    <string name="toast_headPic_success">头像上传成功</string>
+    <string name="toast_headPic_error">头像上传失败</string>
+    <string name="user_service">客户服务</string>
+    <string name="order_message">订单消息</string>
+    <string name="activity_message">活动消息</string>
+
+    <string name="unit_name">单位名称：</string>
+    <string name="no_message">暂无消息</string>
+    <string name="preferential_promotion">优惠促销</string>
+    <string name="activity_name">活动详情</string>
+
+    <string name="err_download_failed">下载失败</string>
+    <string name="txt_downloading">正在下载&#8230;&#8230;</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+</resources>

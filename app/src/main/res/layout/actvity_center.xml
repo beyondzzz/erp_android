@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ashenBackgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/center_evaluation"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_enter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/my_order_list_item"
+        />
+    <RelativeLayout
+        android:id="@+id/no_should_evaluation_order_rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_order"
+            android:drawableTop="@drawable/icon_noorder"
+            android:drawablePadding="@dimen/trans_50px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/trans_200px"
+            android:textColor="@color/no_data_ashen"
+            android:textSize="@dimen/text_trans_32px"
+            />
+    </RelativeLayout>
+</LinearLayout>

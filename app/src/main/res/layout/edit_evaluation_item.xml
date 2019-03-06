@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/edit_evaluation_page">
+
+    <RelativeLayout
+        android:id="@+id/classify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/evaluation_bask"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+        <TextView
+            android:id="@+id/evaluation_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/submit"
+            android:textColor="@color/checkGreenColor"
+            android:textSize="@dimen/text_trans_27px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/trans_30px"
+        android:paddingLeft="@dimen/trans_25px"
+        android:paddingTop="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/should_evaluation_goods_img"
+            android:layout_width="@dimen/trans_100px"
+            android:layout_height="@dimen/trans_100px"
+            android:src="@drawable/img_steamed" />
+
+        <TextView
+            android:id="@+id/grade_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/should_evaluation_goods_img"
+            android:layout_marginLeft="@dimen/trans_50px"
+            android:layout_toRightOf="@id/should_evaluation_goods_img"
+            android:text="@string/grade"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_trans_27px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/should_evaluation_goods_img"
+            android:layout_alignLeft="@id/grade_name"
+            android:layout_toRightOf="@id/should_evaluation_goods_img"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/evaluation_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/trans_30px"
+                android:src="@drawable/star_yellow" />
+
+            <ImageView
+                android:id="@+id/evaluation_star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/trans_30px"
+                android:src="@drawable/star_yellow" />
+
+            <ImageView
+                android:id="@+id/evaluation_star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/trans_30px"
+                android:src="@drawable/star_yellow" />
+
+            <ImageView
+                android:id="@+id/evaluation_star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/trans_30px"
+                android:src="@drawable/star_yellow" />
+
+            <ImageView
+                android:id="@+id/evaluation_star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/trans_30px"
+                android:src="@drawable/star_gray" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_evaluation_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lineViewBg"
+        android:enabled="true"
+        android:gravity="top"
+        android:hint="请对商品进行评价，200字以内。"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:maxLength="200"
+        android:paddingLeft="@dimen/trans_25px"
+        android:paddingRight="@dimen/trans_25px"
+        android:paddingTop="@dimen/trans_20px"
+        android:textColor="@color/moreText"
+        android:textSize="@dimen/text_trans_24px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lineViewBg"
+        android:paddingTop="@dimen/trans_10px"
+        android:paddingBottom="@dimen/trans_10px"
+        >
+        <TextView
+            android:id="@+id/now_evaluation_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_toLeftOf="@id/evaluation_max_world"
+            />
+        <TextView
+            android:id="@+id/evaluation_max_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/evaluation_max_world"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/trans_25px"
+
+            />
+    </RelativeLayout>
+   <!--<LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/trans_170px"
+      android:orientation="horizontal"
+       >-->
+       <!--<com.jl.jlapp.utils.GridImageLayout-->
+           <!--android:id="@+id/gv_pics"-->
+           <!--android:layout_width="match_parent"-->
+           <!--android:layout_height="match_parent"-->
+           <!--android:layout_marginTop="@dimen/trans_15px"-->
+           <!--android:layout_marginLeft="@dimen/trans_10px"-->
+           <!--android:layout_marginRight="@dimen/trans_25px"-->
+           <!--android:layout_marginBottom="@dimen/trans_15px"-->
+           <!--android:animateLayoutChanges="true"-->
+           <!--grid:columnNum="5"-->
+           <!--grid:maxNum="5"-->
+           <!--grid:horizontalSpace="4dp">-->
+
+           <!--<ImageView-->
+               <!--android:id="@+id/iv_add"-->
+               <!--android:layout_width="wrap_content"-->
+               <!--android:layout_height="wrap_content"-->
+               <!--android:src="@drawable/upload_certificate"-->
+               <!--android:tag="@string/img_add"-->
+               <!--tools:ignore="ContentDescription" />-->
+       <!--</com.jl.jlapp.utils.GridImageLayout>-->
+  <!-- </LinearLayout>-->
+
+
+    <com.yzs.imageshowpickerview.ImageShowPickerView
+        android:id="@+id/it_picker_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        grid:is_show_del="true"
+        android:layout_marginLeft="@dimen/trans_20px"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginTop="@dimen/trans_15px"
+        android:layout_marginBottom="@dimen/trans_15px"/>
+
+
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/trans_25px"
+        android:layout_marginLeft="@dimen/trans_10px"
+        android:layout_marginRight="@dimen/trans_25px"
+        android:layout_marginBottom="@dimen/trans_15px"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/trans_15px">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_steamed"
+                    android:layout_marginTop="@dimen/trans_5px"
+                    android:layout_marginRight="@dimen/trans_5px"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_del_certificate"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/trans_15px">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_steamed"
+                    android:layout_marginTop="@dimen/trans_5px"
+                    android:layout_marginRight="@dimen/trans_5px"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_del_certificate"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/trans_15px">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_steamed"
+                    android:layout_marginTop="@dimen/trans_5px"
+                    android:layout_marginRight="@dimen/trans_5px"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_del_certificate"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/trans_15px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/img_steamed"
+                    android:layout_marginTop="@dimen/trans_5px"
+                    android:layout_marginRight="@dimen/trans_5px"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_del_certificate"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/trans_15px"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_steamed"
+                    android:layout_marginTop="@dimen/trans_5px"
+                    android:layout_marginRight="@dimen/trans_5px"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_del_certificate"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/upload_certificate_s"
+               android:layout_marginTop="@dimen/trans_15px"
+               android:layout_marginRight="@dimen/trans_5px"
+               android:layout_marginLeft="@dimen/trans_15px"
+               />
+        </RelativeLayout>
+    </LinearLayout>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/evaluation_point"
+        android:textSize="@dimen/text_trans_22px"
+        android:textColor="@color/moreText"
+        android:paddingLeft="@dimen/trans_25px"
+        android:paddingRight="@dimen/trans_25px"
+        android:layout_marginBottom="@dimen/trans_10px"
+        android:lineSpacingExtra="@dimen/trans_5px"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"/>
+    </LinearLayout>
+</LinearLayout>

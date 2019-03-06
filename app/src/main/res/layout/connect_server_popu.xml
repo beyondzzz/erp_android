@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/trans_325px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/trans_100px"
+        android:layout_marginRight="@dimen/trans_100px"
+        android:id="@+id/layout"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/popu_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/clear_history_bottom_btn_above"
+                android:text="4006865856"
+                android:gravity="center"
+                android:textSize="@dimen/text_trans_36px"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/clear_history_bottom_btn_above"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/trans_1px"
+                android:background="@color/cutOffrule"
+                android:layout_above="@id/clear_history_bottom_btn"
+                />
+            <LinearLayout
+                android:id="@+id/clear_history_bottom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/clear_history_bottom_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/text_trans_34px"
+                    android:textColor="@color/trans_333333"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/trans_30px"
+                    android:paddingBottom="@dimen/trans_30px"
+                    />
+                <TextView
+                    android:id="@+id/clear_history_bottom_ok_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="呼叫"
+                    android:textSize="@dimen/text_trans_34px"
+                    android:textColor="@color/white"
+                    android:background="@color/checkGreenColor"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/trans_30px"
+                    android:paddingBottom="@dimen/trans_30px"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

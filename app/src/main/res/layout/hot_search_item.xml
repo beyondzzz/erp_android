@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/hot_search_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        android:text="苹果"
+        android:layout_marginRight="@dimen/trans_15px"
+        android:layout_marginLeft="@dimen/trans_15px"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/trans_15px"
+        android:layout_marginBottom="@dimen/trans_15px"
+        android:textSize="@dimen/text_trans_24px"
+        android:textColor="@color/trans_333333"
+        android:singleLine="true"
+        />
+
+</LinearLayout>

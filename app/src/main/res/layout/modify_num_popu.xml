@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/trans_325px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/trans_100px"
+        android:layout_marginRight="@dimen/trans_100px"
+        android:id="@+id/layout"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_above="@id/clear_history_bottom_btn_above"
+                >
+                <TextView
+                    android:id="@+id/popu_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="修改购买数量"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_trans_36px"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/trans_20px"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_reduce_shape"
+                        android:paddingLeft="@dimen/trans_30px"
+                        android:paddingRight="@dimen/trans_30px"
+                        android:text="—"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/trans_55px"
+                        android:paddingTop="0.5dp"
+                        android:layout_alignTop="@id/tv_buy_num"
+                        android:layout_alignBottom="@id/tv_buy_num"
+                        android:gravity="center"
+                        />
+
+                    <EditText
+                        android:id="@+id/tv_buy_num"
+                        android:layout_width="@dimen/trans_200px"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_num_shape"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="@dimen/trans_10px"
+                        android:paddingRight="@dimen/trans_10px"
+                        android:paddingTop="4dp"
+                        android:text="1"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/trans_46px"
+                        android:layout_toRightOf="@id/tv_reduce"/>
+
+                    <TextView
+                        android:id="@+id/tv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_add_shape"
+                        android:paddingLeft="@dimen/trans_35px"
+                        android:paddingRight="@dimen/trans_35px"
+                        android:text="+"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/trans_55px"
+                        android:paddingTop="0.5dp"
+                        android:layout_toRightOf="@id/tv_buy_num"
+                        android:layout_alignTop="@id/tv_buy_num"
+                        android:layout_alignBottom="@id/tv_buy_num"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/clear_history_bottom_btn_above"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/trans_1px"
+                android:background="@color/cutOffrule"
+                android:layout_above="@id/clear_history_bottom_btn"
+                />
+            <LinearLayout
+                android:id="@+id/clear_history_bottom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/modify_num_bottom_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/text_trans_34px"
+                    android:textColor="@color/trans_333333"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/trans_30px"
+                    android:paddingBottom="@dimen/trans_30px"
+                    />
+                <TextView
+                    android:id="@+id/modify_num_bottom_ok_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ok"
+                    android:textSize="@dimen/text_trans_34px"
+                    android:textColor="@color/white"
+                    android:background="@color/checkGreenColor"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/trans_30px"
+                    android:paddingBottom="@dimen/trans_30px"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

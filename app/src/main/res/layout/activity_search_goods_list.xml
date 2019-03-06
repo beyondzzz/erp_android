@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jl.jlapp.mvp.activity.SearchGoodsListActivity"
+    android:id="@+id/goods_search_drawer_layout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/trans_20px"
+            android:layout_marginBottom="@dimen/trans_20px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <ImageView
+                android:id="@+id/iv_back_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/shoplist_return"
+                android:layout_marginLeft="@dimen/trans_40px"
+                />
+
+            <TextView
+                android:id="@+id/goods_list_top_search_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_shaixuan"
+                android:layout_toRightOf="@+id/iv_back_left"
+                android:background="@drawable/shape"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/icon_input_search"
+                android:drawablePadding="@dimen/trans_30px"
+                android:paddingLeft="@dimen/trans_30px"
+                android:gravity="center_vertical"
+                android:hint="@string/input_search_text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_trans_26px"
+                android:layout_marginLeft="@dimen/trans_42px"
+                android:singleLine="true"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_shaixuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@drawable/icon_search"
+                android:layout_marginLeft="@dimen/trans_33px"
+                android:text="@string/search_text"
+                android:drawablePadding="@dimen/trans_5px"
+                android:layout_marginRight="@dimen/trans_40px"
+                android:textColor="@color/basic_wheelview_color"
+                android:textSize="@dimen/text_trans_27px"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cutOffrule"
+            />
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/trans_30px"
+                android:paddingBottom="@dimen/trans_30px"
+                android:layout_weight="3"
+
+                >
+                <RadioButton
+                    android:id="@+id/shop_list_synthesized_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/synthesized"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/shop_order_check"
+                    android:textSize="@dimen/text_trans_27px"
+                    />
+                <RadioButton
+                    android:id="@+id/shop_list_sale_num_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saleNum"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/shop_order_check"
+                    android:textSize="@dimen/text_trans_27px"/>
+                <RadioButton
+                    android:id="@+id/shop_list_price_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/price"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/shop_order_check"
+                    android:textSize="@dimen/text_trans_27px"/>
+
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/brand_search_popu_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/brand_btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/brand"
+                    android:textColor="@color/shop_order_check"
+                    android:textSize="@dimen/text_trans_27px"
+                    android:gravity="center"
+                    />
+                <ImageView
+                    android:id="@+id/brand_btn_upordown_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shop_orderby_brand_check"
+                    android:layout_marginLeft="@dimen/trans_10px"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/goods_search_railing_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cutOffrule"
+            />
+        <FrameLayout
+            android:id="@+id/shop_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+    <!-- 右侧滑动栏 -->
+    <RelativeLayout
+        android:id="@+id/main_right_drawer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@+id/filter_sideslip_layout"
+            layout="@layout/filter_sideslip_layout"
+            />
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

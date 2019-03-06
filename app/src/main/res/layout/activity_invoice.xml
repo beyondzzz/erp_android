@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/invoice_page"
+    >
+
+    <RelativeLayout
+        android:id="@+id/order_write_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发票信息"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/order_write_title_fg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/order_write_title"
+        android:background="@color/cutOffrule" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/trans_30px"
+        android:layout_below="@id/order_write_title_fg"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_vat_invoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="增票资质"
+            android:textSize="@dimen/text_trans_27px"
+            android:textColor="@color/trans_333333"
+            android:drawablePadding="@dimen/trans_25px"
+            android:drawableBottom="@drawable/splite_green"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_unit_invoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="普票单位"
+            android:drawablePadding="@dimen/trans_25px"
+            android:drawableBottom="@drawable/splite_green"
+            android:textSize="@dimen/text_trans_27px"
+            android:textColor="@color/trans_333333"/>
+    </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/lay_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title"
+        android:background="@color/ashenBackgroundColor"
+        />
+
+
+</RelativeLayout>

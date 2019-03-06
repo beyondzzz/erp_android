@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_order_title"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/trans_60px"
+        android:paddingTop="@dimen/trans_35px"
+        android:paddingBottom="@dimen/trans_35px"
+        android:text="待支付金额："
+        android:textColor="@color/trans_333333"
+        android:textSize="@dimen/text_trans_27px" />
+
+    <TextView
+        android:id="@+id/tv_order_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_order_title"
+        android:paddingLeft="@dimen/trans_30px"
+        android:paddingRight="@dimen/trans_60px"
+        android:paddingTop="@dimen/trans_35px"
+        android:paddingBottom="@dimen/trans_35px"
+        android:text="@string/text_submit"
+        android:textColor="@color/trans_333333"
+        android:textSize="@dimen/text_trans_27px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_order_title"
+        android:background="@color/cutOffRule" />
+</RelativeLayout>

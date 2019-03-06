@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/choose_pay_type_page">
+
+    <RelativeLayout
+        android:id="@+id/order_pay_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/trans_10px"
+             android:src="@drawable/shoplist_return"
+             android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择支付方式"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/order_pay_title_fg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/order_pay_title"
+        android:background="@color/cutOffRule" />
+    <LinearLayout
+        android:id="@+id/count_down_pay_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/order_pay_title_fg"
+        android:background="@color/checkGreenColor"
+        android:paddingLeft="@dimen/trans_25px"
+        android:paddingRight="@dimen/trans_25px"
+        android:paddingTop="@dimen/trans_10px"
+        android:paddingBottom="@dimen/trans_10px"
+        >
+        <TextView
+            android:id="@+id/pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付倒计时："
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_trans_24px"
+            />
+        <TextView
+            android:id="@+id/timer_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_trans_27px"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/trans_40px"
+            android:paddingTop="@dimen/trans_5px"/>
+        <TextView
+            android:id="@+id/out_of_time_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  超时未支付，订单自动取消"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/trans_5px"/>
+        <TextView
+            android:id="@+id/overtime_pay_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="超时未支付，订单已取消"
+            android:gravity="center"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/count_down_pay_time"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/trans_80px"
+        android:paddingTop="@dimen/trans_80px"
+        >
+            <LinearLayout
+                android:id="@+id/ly_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="支付金额："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/trans_32px" />
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="¥"
+                        android:textSize="@dimen/trans_32px"
+                        android:layout_toRightOf="@id/tv_str"
+                        android:textColor="@color/orange"/>
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center"
+                        android:textSize="@dimen/trans_32px"
+                        android:layout_toRightOf="@id/tv_unit"
+                        android:textColor="@color/orange"/>
+            </LinearLayout>
+        <TextView
+            android:id="@+id/tips"
+            android:layout_below="@id/ly_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/trans_25px"
+            android:text="提示：订单超出配送范围，运费货到付款"
+            android:textSize="@dimen/text_trans_20px"
+            android:textColor="@color/moreText"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rl_success"
+        android:background="@color/cutOffRule"/>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fl_pay_money"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/space"-->
+        <!--android:clickable="true">-->
+
+        <!--<com.jl.jlapp.utils.SuperTextView-->
+            <!--android:id="@+id/tv_mf_id"-->
+            <!--style="@style/SuperTextViewStyle"-->
+            <!--android:paddingLeft="@dimen/trans_25px"-->
+            <!--android:paddingRight="@dimen/trans_25px"-->
+            <!--android:clickable="false"-->
+            <!--android:drawableRight="@null"-->
+            <!--android:text="@string/text_pay_money" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_money_num"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="95dp"-->
+            <!--android:text="¥1111"-->
+            <!--android:textColor="@color/orange"-->
+            <!--android:textSize="@dimen/text_trans_27px"-->
+            <!--/>-->
+
+    <!--</FrameLayout>-->
+    <RelativeLayout
+        android:id="@+id/pay_type_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_success">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@color/ashenBackgroundColor" />
+
+        <TextView
+            android:id="@+id/tv_pay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:paddingBottom="16dp"
+            android:paddingLeft="@dimen/trans_25px"
+            android:paddingRight="@dimen/trans_25px"
+            android:paddingTop="16dp"
+            android:text="@string/text_pay_type"
+            android:textSize="@dimen/text_trans_27px"
+            android:textColor="@color/moreText"
+            />
+
+        <TextView
+            android:id="@+id/space_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tv_pay_type"
+            android:background="@color/cutOffRule" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/space_line"
+            android:orientation="vertical"
+            app:divider="@drawable/divider_1dp_vertical"
+            app:showDividers="middle"
+            android:paddingLeft="@dimen/trans_35px"
+            android:paddingRight="@dimen/trans_35px"
+            >
+
+            <com.jl.jlapp.utils.SuperTextView
+                android:id="@+id/stv_wechat_pay"
+                style="@style/SuperTextViewStyle"
+                android:drawableLeft="@drawable/icon_webchat"
+                android:drawablePadding="@dimen/trans_30px"
+                android:text="@string/stv_wechat_pay"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/trans_333333"
+                />
+
+            <com.jl.jlapp.utils.SuperTextView
+                android:id="@+id/stv_alipay"
+                style="@style/SuperTextViewStyle"
+                android:drawableLeft="@drawable/icon_zfb"
+                android:drawablePadding="@dimen/trans_30px"
+                android:text="@string/stv_alipay"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/trans_333333"/>
+
+            <com.jl.jlapp.utils.SuperTextView
+                android:id="@+id/stv_union_pay"
+                style="@style/SuperTextViewStyle"
+                android:drawableLeft="@drawable/icon_card"
+                android:drawablePadding="@dimen/trans_25px"
+                android:text="@string/stv_union_pay"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/trans_333333" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat
+           >
+    </RelativeLayout>
+
+
+</RelativeLayout>

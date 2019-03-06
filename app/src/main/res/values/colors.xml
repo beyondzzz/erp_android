@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#666666</color>
+    <color name="checkGreenColor">#60b746</color>
+    <color name="ashenBackgroundColor">#f0f2f5</color>
+    <color name="state_pass">#e9ffe2</color>
+    <color name="state_wait_check">#fcf8e3</color>
+    <color name="state_dis_pass">#f2dede</color>
+
+
+    <color name="light_gray">#C2C2C2</color>
+    <color name="clickspan_color">#00ddb6</color>
+    <color name="trans_666666">#666666</color>
+
+    <!--商品列表页-->
+    <color name="hintColor">#c3c5cf</color>
+    <color name="cutOffrule">#dbdcde</color>
+    <color name="orangePriceColor">#f28439</color>
+    <color name="cutOffRule">#e8e8e8</color>
+
+    <color name="no_data_ashen">#c0c0c2</color>
+
+    <color name="light_blue">#FF128DE5</color>
+    <color name="light_green">#e9ffe2</color>
+    <color name="orange">#f28439</color>
+    <color name="black">#FF000000</color>
+
+    <color name="dark_gray">#5D5D5D</color>
+
+    <!--首页-->
+    <color name="lineViewBg">#f4f4f4</color>
+    <color name="moreText">#999999</color>
+    <color name="hotHeadText">#fa5e62</color>
+    
+    <color name="add_or_delete_border">#bcbcbc</color>
+    <color name="shop_cart_no_goods_gray">#bcbcbc</color>
+    <color name="textColor">#333333</color>
+    <color name="search_history_striping_color">#ededed</color>
+    
+    <color name="coupon_explanation">#afafaf</color>
+    <color name="grey_9f">#9f9f9f</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+</resources>

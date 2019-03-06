@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/search_history_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="火龙果"
+        android:textColor="@color/trans_666666"
+        android:textSize="@dimen/text_trans_27px"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_15px"
+        android:layout_marginBottom="@dimen/trans_20px"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/search_history_striping_color"
+        />
+</LinearLayout>

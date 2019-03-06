@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/trans_20px"
+        android:layout_marginRight="@dimen/trans_20px"
+        android:layout_marginTop="@dimen/trans_20px"
+        >
+        <TextView
+            android:id="@+id/goods_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="0"
+            />
+        <ImageView
+            android:id="@+id/goods_img"
+            android:layout_width="@dimen/trans_170px"
+            android:layout_height="@dimen/trans_170px"
+            android:src="@drawable/img_steamed" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/trans_15px"
+            android:layout_marginLeft="@dimen/trans_30px"
+            android:layout_marginTop="@dimen/trans_15px">
+
+            <TextView
+                android:id="@+id/goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="乐肴居冰皮麻糬（芒果慕斯味）50克*10个*12袋/箱"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_trans_30px"
+                android:lines="2"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="¥"
+                android:textColor="@color/orangePriceColor"
+                android:textSize="@dimen/text_trans_30px" />
+
+            <TextView
+                android:id="@+id/goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/price_unit"
+                android:text="284.04"
+                android:textColor="@color/orangePriceColor"
+                android:textSize="@dimen/text_trans_30px" />
+
+            <TextView
+                android:id="@+id/old_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/trans_10px"
+                android:layout_toRightOf="@id/goods_price"
+                android:text="¥284.04"
+                android:textColor="@color/font_grey"
+                android:textSize="@dimen/text_trans_24px" />
+            <TextView
+                android:id="@+id/yishou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/goods_price"
+                android:layout_marginLeft="@dimen/trans_50px"
+                android:layout_toRightOf="@id/old_goods_price"
+                android:text="已售"
+                android:textColor="@color/font_grey"
+                android:textSize="@dimen/text_trans_24px" />
+
+            <TextView
+                android:id="@+id/is_sale_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/goods_price"
+                android:layout_toRightOf="@id/yishou"
+                android:text="230"
+                android:textColor="@color/font_grey"
+                android:textSize="@dimen/text_trans_24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/goods_price"
+                android:layout_toRightOf="@id/is_sale_num"
+                android:text="件"
+                android:textColor="@color/font_grey"
+                android:textSize="@dimen/text_trans_24px" />
+
+            <ImageView
+                android:id="@+id/goods_list_add_shop_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/goods_price"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/shoppingcar" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/cutOffRule"
+    android:layout_marginTop="@dimen/trans_20px"
+    />
+
+
+</LinearLayout>

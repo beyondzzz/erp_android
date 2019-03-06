@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/invoice_page"
+    android:background="@color/ashenBackgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/order_write_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/invoice_choose"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+        <TextView
+            android:id="@+id/invoice_must_know_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票须知"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_27px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/order_write_title_fg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/order_write_title"
+        android:background="@color/cutOffrule" />
+
+    <ScrollView
+        android:id="@+id/invoice_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_ok"
+        android:layout_below="@id/order_write_title_fg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_prompt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/light_green"
+                android:drawableLeft="@drawable/icon_tip"
+                android:drawablePadding="@dimen/dp_10"
+                android:lineSpacingExtra="@dimen/trans_10px"
+                android:paddingBottom="@dimen/trans_20px"
+                android:paddingLeft="@dimen/trans_30px"
+                android:paddingRight="@dimen/trans_20px"
+                android:paddingTop="@dimen/trans_20px"
+                android:text="@string/text_invoice_prompt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_trans_22px" />
+
+            <RelativeLayout
+                android:id="@+id/rl_first"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_prompt"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/trans_30px"
+                android:paddingLeft="@dimen/trans_50px"
+                android:paddingRight="@dimen/trans_50px"
+                android:paddingTop="@dimen/trans_30px">
+
+                <TextView
+                    android:id="@+id/tv_invoice_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/text_invoice_type"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_32px"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_invoice_type"
+                    android:layout_marginTop="@dimen/trans_30px"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_ordinary_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/bk_button_green"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/text_ordinary_invoice"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <RadioButton
+                        android:id="@+id/rb_added_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bk_button_green"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/text_added_invoice"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <RadioButton
+                        android:id="@+id/rb_no_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/bk_button_green"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/text_no_invoice"
+                        android:textSize="@dimen/text_trans_27px" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_first"
+                android:layout_marginTop="@dimen/trans_20px"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/trans_35px"
+                android:paddingLeft="@dimen/trans_50px"
+                android:paddingRight="@dimen/trans_50px"
+                android:paddingTop="@dimen/trans_35px">
+
+                <RelativeLayout
+                    android:id="@+id/invoice_looked_up_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_rise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_invoice_rise"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_invoice_rise"
+                        android:layout_marginTop="@dimen/trans_50px"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_personal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/bk_checked"
+                            android:drawablePadding="@dimen/trans_25px"
+                            android:text="个人"
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <RadioButton
+                            android:id="@+id/rb_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_110px"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/bk_checked"
+                            android:drawablePadding="@dimen/trans_25px"
+                            android:text="单位"
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+                    </RadioGroup>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlv_company_list"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rg"
+                        android:visibility="gone"
+                        tools:listitem="@layout/item_company_list" />
+
+                    <TextView
+                        android:id="@+id/tv_add_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlv_company_list"
+                        android:layout_marginTop="@dimen/trans_40px"
+                        android:background="@drawable/rc_light_green"
+                        android:drawableLeft="@drawable/icon_add_company"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:text="@string/text_add_commpny"
+                        android:textColor="@color/checkGreenColor"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/add_unit_name_world_rela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlv_company_list"
+                        android:layout_marginTop="@dimen/trans_30px"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/add_unit_name_world"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="单   位   名   称："
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <EditText
+                            android:id="@+id/edit_unit_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_10px"
+                            android:layout_marginRight="@dimen/trans_30px"
+                            android:layout_toRightOf="@id/add_unit_name_world"
+                            android:background="@drawable/bg_text_grey_border_invoice"
+                            android:maxHeight="@dimen/trans_50px"
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/add_taxpayer_identification_number_world_rela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/add_unit_name_world_rela"
+                        android:layout_marginTop="@dimen/trans_30px"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/add_taxpayer_identification_number_world"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="纳税人识别号："
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+
+                        <EditText
+                            android:id="@+id/edit_taxpayer_identification_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/trans_10px"
+                            android:layout_marginRight="@dimen/trans_30px"
+                            android:layout_toRightOf="@id/add_taxpayer_identification_number_world"
+                            android:background="@drawable/bg_text_grey_border_invoice"
+                            android:maxHeight="@dimen/trans_50px"
+                            android:textColor="@color/trans_333333"
+                            android:textSize="@dimen/text_trans_27px" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_save_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/add_taxpayer_identification_number_world_rela"
+                        android:layout_marginTop="@dimen/trans_40px"
+                        android:background="@drawable/rc_light_green"
+                        android:paddingLeft="@dimen/trans_30px"
+                        android:paddingRight="@dimen/trans_30px"
+                        android:text="@string/save"
+                        android:textColor="@color/checkGreenColor"
+                        android:textSize="@dimen/text_trans_27px"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_second_vate_invoice_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/vat_invoice_aptitude_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vat_invoice_aptitude"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_32px" />
+
+                    <TextView
+                        android:id="@+id/vat_invoice_unit_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vat_invoice_aptitude_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="单位名称："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/vat_invoice_unit_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/vat_invoice_unit_name"
+                        android:layout_toRightOf="@id/vat_invoice_unit_name"
+                        android:text="北京市什么什么什么什么有限公司"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/taxpayer_identification_number_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vat_invoice_unit_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="纳税人识别号："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/taxpayer_identification_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/taxpayer_identification_number_name"
+                        android:layout_toRightOf="@id/taxpayer_identification_number_name"
+                        android:text="1234567890"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/registered_address_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taxpayer_identification_number_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="注册地址："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/registered_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/registered_address_name"
+                        android:layout_toRightOf="@id/registered_address_name"
+                        android:text="北京市海淀区什么路什么楼什么号"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/registered_tel_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/registered_address_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="注册电话："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/registered_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/registered_tel_name"
+                        android:layout_toRightOf="@id/registered_tel_name"
+                        android:text="010-12345678"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/deposit_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/registered_tel_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="开户行："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/deposit_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/deposit_bank_name"
+                        android:layout_toRightOf="@id/deposit_bank_name"
+                        android:text="中国工商银行什么什么支行"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/bank_account_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deposit_bank_name"
+                        android:layout_marginTop="@dimen/trans_10px"
+                        android:text="银行账号："
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <TextView
+                        android:id="@+id/bank_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/bank_account_name"
+                        android:layout_toRightOf="@id/bank_account_name"
+                        android:text="123456789012345789"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_second_no_vate_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/rl_second_no_vate_invoice_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="未提交增票资质"
+                        android:textColor="@color/moreText"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/invoice_content_rela"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_second"
+                android:layout_marginTop="@dimen/trans_20px"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/trans_35px"
+                android:paddingLeft="@dimen/trans_50px"
+                android:paddingRight="@dimen/trans_50px"
+                android:paddingTop="@dimen/trans_35px">
+
+                <TextView
+                    android:id="@+id/tv_invoice_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发票内容"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_invoice_content"
+                    android:layout_marginTop="@dimen/trans_50px"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_detailed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/bk_checked"
+                        android:drawablePadding="@dimen/trans_25px"
+                        android:text="明细"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+
+                    <RadioButton
+                        android:id="@+id/rb_foods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/trans_30px"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/bk_checked"
+                        android:drawablePadding="@dimen/trans_25px"
+                        android:text="食品"
+                        android:textColor="@color/trans_333333"
+                        android:textSize="@dimen/text_trans_27px" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/trans_20px"
+        android:layout_marginLeft="@dimen/trans_170px"
+        android:layout_marginRight="@dimen/trans_170px"
+        android:layout_marginTop="@dimen/trans_20px"
+        android:background="@drawable/btn_order_confrim"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_trans_32px"
+        />
+
+</RelativeLayout>

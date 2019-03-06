@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="subTitle" format="string" />
+    <attr name="subTitleColor" format="color" />
+    <attr name="ratio" format="fraction" />
+    <attr name="span" format="dimension" />
+
+    <declare-styleable name="SuperTextView">
+        <attr name="subTitle" />
+        <attr name="subTitleColor" />
+        <attr name="ratio" />
+    </declare-styleable>
+
+    <declare-styleable name="GridImageLayout">
+        <attr name="verticalSpace" format="dimension" />
+        <attr name="horizontalSpace" format="dimension" />
+        <attr name="columnNum" format="integer" />
+        <attr name="maxNum" format="integer"/>
+        <attr name="enableLimit" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean"/>
+        <attr name="primaryColor" format="color"/>
+        <attr name="primaryColorDark" format="color"/>
+        <attr name="offColor" format="color"/>
+        <attr name="offColorDark" format="color"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="ratioAspect" format="float"/>
+        <attr name="isOpened" format="boolean"/>
+    </declare-styleable>
+</resources>

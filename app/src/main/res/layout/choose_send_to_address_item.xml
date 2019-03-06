@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/trans_30px">
+        <ImageView
+            android:id="@+id/choose_address_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_location_green_m"
+            android:layout_marginTop="@dimen/trans_7px"
+            />
+        <TextView
+            android:id="@+id/choose_address_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/choose_address_location_img"
+            android:text="北京市海淀区三环到四环之间学院路35号世宁大厦15层"
+            android:textSize="@dimen/text_trans_24px"
+            android:textColor="@color/checkGreenColor"
+            android:layout_marginLeft="@dimen/trans_30px"
+            android:layout_toLeftOf="@id/choose_address_location_checkmark_img"
+            android:layout_marginRight="@dimen/trans_40px"
+            android:lineSpacingExtra="@dimen/trans_5px"
+            />
+        <ImageView
+            android:id="@+id/choose_address_location_checkmark_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_location_checkmark_green"
+
+            android:layout_marginTop="@dimen/trans_7px"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        />
+</LinearLayout>

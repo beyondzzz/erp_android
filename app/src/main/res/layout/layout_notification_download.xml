@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/notificationImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/notificationImage"
+        android:layout_toRightOf="@id/notificationImage"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/notificationPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/notificationTitle"
+        tools:text="80%"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/notificationProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/notificationTitle"
+        android:layout_alignStart="@id/notificationTitle"
+        android:layout_below="@id/notificationTitle"
+        android:layout_toLeftOf="@id/notificationPercent"
+        android:layout_toStartOf="@id/notificationPercent"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
+
+</RelativeLayout>

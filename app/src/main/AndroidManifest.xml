@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jl.jlapp">
+
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+
+    <!-- 微信申明应用权限  重复有的注释 -->
+    <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 微信支付权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".mvp.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="食讯帮"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:icon, android:label,android:theme">
+        <activity
+            android:name=".mvp.activity.ScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.activity.SearchGoodsListActivity"
+            android:label="@string/title_activity_search_goods_list"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".mvp.activity.BaseActivity"
+            android:theme="@style/DefaultCityPickerTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.MyOrderListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.OrderSubmitActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.ChooseAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.DiscountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.OrderWriteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.OrderTracingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AfterSaleDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AfterSaleApplyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.HomeSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.GoodsDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.NoSortGoodsListForNewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.NoSortGoodsListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 评价中心 -->
+        <activity
+            android:name=".mvp.activity.CenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.EvaluationActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.ShouldEvaluationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UnderlineActivity"
+            android:label="@string/title_activity_underline"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.PayResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UnderLinePayResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.PayOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.EditEvaluationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.EvaluationDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.MyAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.CustomerServiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.EvalSubmitSuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.InvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AddVatInvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AddVatInvoicePicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AddVatInvoiceWaitCheckActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UserMessageSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UserNameSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.MessageSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.MessageCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.OrderMessageListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.AddGeneralInvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.ActivityMessageListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.ActivityNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.vatInvoiceConfirmBookActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UserCouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.CouponCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.CouponHasGoodsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.BindPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.PhotoViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".mvp.activity.UnderlineDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- <activity android:name=".mvp.activity.DemoActivity"/> -->
+        <!-- 注册服务 -->
+        <service
+            android:name=".service.DownloadService"
+            android:screenOrientation="portrait"/>
+
+        <!-- QQ登录配置 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106681667" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- QQ登录配置 -->
+
+
+        <!-- 微信登录配置 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:theme="@style/wx_login_style" />
+        <!-- 微信登录配置 end -->
+
+
+        <!-- 支付宝登录配置 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 支付宝登录配置  end -->
+        <!-- 微信支付配置 start -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!-- 微信支付配置 end -->
+
+        <provider
+            android:name=".utils.MyFileProvider"
+            android:authorities="com.jl.jlapp.publish.MyFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jl.jlapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

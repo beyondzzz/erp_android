@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_data" type="id" />
+    <item name="tag_glide_item" type="id" />
+    <item name="iv_mail_pic" type="id" />
+    <item name="iv_mail_phone" type="id" />
+</resources>

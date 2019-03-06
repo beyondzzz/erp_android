@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fenge_bottom_btn"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/trans_50px"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/trans_50px"
+            android:paddingRight="@dimen/trans_50px">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_20px"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/trans_50px"
+                    android:text="@string/goods_filter"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_32px" />
+                <ImageView
+                    android:id="@+id/close_btn_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_close_gray"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/only_look_has_goods_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/filter_sideslip_msg_bac"
+                android:gravity="center"
+                android:text="@string/only_look_has_goods"
+                android:textColor="@color/shop_order_check"
+                android:textSize="@dimen/text_trans_24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_50px"
+                android:layout_marginTop="@dimen/trans_50px"
+                android:text="@string/price_range"
+                android:textColor="@color/trans_333333"
+                android:textSize="@dimen/text_trans_32px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/sideslip_min_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/goods_check_button_l"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="@string/min_price"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_24px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/trans_15px"
+                    android:layout_marginRight="@dimen/trans_15px"
+                    android:text="——" />
+
+                <EditText
+                    android:id="@+id/sideslip_max_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/goods_check_button_l"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="@string/max_price"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_24px" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_25px"
+                android:layout_marginTop="@dimen/trans_50px">
+
+                <TextView
+                    android:id="@+id/brand_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/brand"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_32px" />
+
+                <TextView
+                    android:id="@+id/sideslip_brand_all_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/trans_25px"
+                    android:drawableRight="@drawable/up"
+                    android:text="@string/all"
+                    android:textColor="@color/font_grey"
+                    android:textSize="@dimen/text_trans_28px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/sideslip_brand_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/trans_25px"
+                android:layout_marginTop="@dimen/trans_50px">
+
+                <TextView
+                    android:id="@+id/classify_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/classify_name"
+                    android:textColor="@color/trans_333333"
+                    android:textSize="@dimen/text_trans_32px" />
+
+
+                <TextView
+                    android:id="@+id/sideslip_classify_all_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/trans_25px"
+                    android:drawableRight="@drawable/up"
+                    android:text="@string/all"
+                    android:textColor="@color/font_grey"
+                    android:textSize="@dimen/text_trans_28px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_contect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/trans_60px"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/sideslip_classify_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fenge_bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/sideslip_content_bottom_btn"
+        android:background="@color/cutOffrule" />
+
+    <LinearLayout
+        android:id="@+id/sideslip_content_bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/sideslip_reset_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/trans_35px"
+            android:paddingTop="@dimen/trans_35px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:textColor="@color/trans_333333"
+                android:textSize="@dimen/text_trans_32px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sideslip_ok_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/checkGreenColor"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/trans_35px"
+            android:paddingTop="@dimen/trans_35px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_trans_32px" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

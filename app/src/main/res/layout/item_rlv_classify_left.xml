@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_clissify_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/trans_40px"
+        android:paddingBottom="@dimen/trans_40px"
+        android:text="默认分类"
+        android:textSize="@dimen/text_trans_27px"
+        android:layout_marginBottom="1px"
+        android:textColor="@color/trans_333333"
+        android:background="@drawable/classifity_left_item_border"
+        />
+
+
+</RelativeLayout>

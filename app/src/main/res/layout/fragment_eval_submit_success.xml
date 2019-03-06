@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ashenBackgroundColor"
+    tools:context="com.jl.jlapp.mvp.fragment.EvalSubmitSuccessFragment">
+
+    <RelativeLayout
+        android:id="@+id/evaluation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/trans_30px">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:src="@drawable/shoplist_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/evaluation_detail"
+            android:textColor="@color/trans_333333"
+            android:textSize="@dimen/text_trans_35px" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cutOffRule"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarBanner"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_success_m"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center"
+            android:text="提交成功"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        tools:listitem="@layout/evaluation_submit_success_item" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/trans_20px"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/trans_30px"
+            android:paddingLeft="@dimen/trans_25px"
+            android:paddingTop="@dimen/trans_30px">
+
+            <ImageView
+                android:id="@+id/should_evaluation_goods_img"
+                android:layout_width="@dimen/trans_100px"
+                android:layout_height="@dimen/trans_100px"
+                android:src="@drawable/img_steamed" />
+
+            <TextView
+                android:id="@+id/grade_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/should_evaluation_goods_img"
+                android:layout_marginLeft="@dimen/trans_50px"
+                android:layout_toRightOf="@id/should_evaluation_goods_img"
+                android:text="@string/grade"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_trans_27px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/should_evaluation_goods_img"
+                android:layout_alignLeft="@id/grade_name"
+                android:layout_toRightOf="@id/should_evaluation_goods_img"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/evaluation_star1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/trans_30px"
+                    android:src="@drawable/star_yellow" />
+
+                <ImageView
+                    android:id="@+id/evaluation_star2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/trans_30px"
+                    android:src="@drawable/star_yellow" />
+
+                <ImageView
+                    android:id="@+id/evaluation_star3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/trans_30px"
+                    android:src="@drawable/star_yellow" />
+
+                <ImageView
+                    android:id="@+id/evaluation_star4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/trans_30px"
+                    android:src="@drawable/star_yellow" />
+
+                <ImageView
+                    android:id="@+id/evaluation_star5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/trans_30px"
+                    android:src="@drawable/star_gray" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/edit_evaluation_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/trans_25px"
+            android:paddingRight="@dimen/trans_25px"
+            android:text="评价详情评价详情评价详情评价详情评价详情评价详情"
+            android:lineSpacingExtra="@dimen/trans_5px"
+            android:textColor="@color/moreText"
+            android:textSize="@dimen/text_trans_24px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/goods_eval_img_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/trans_30px"
+            android:layout_marginLeft="@dimen/trans_25px"
+            android:layout_marginRight="@dimen/trans_25px"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cutOffRule"
+            android:layout_marginTop="@dimen/trans_40px"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ashenBackgroundColor"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/trans_20px"
+    android:paddingRight="@dimen/trans_20px"
+    >
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/trans_35px"
+        android:layout_marginBottom="@dimen/trans_20px"
+        android:gravity="center_horizontal"
+        android:text="7月10日 10:00"
+        android:textColor="@color/trans_666666"
+        android:textSize="@dimen/text_trans_24px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="夏日满减活动"
+            android:textSize="@dimen/text_trans_32px"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_15px"
+            android:layout_marginBottom="@dimen/trans_15px"
+            />
+
+        <ImageView
+            android:id="@+id/activity_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trans_200px"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/activity_name"
+            android:layout_marginRight="@dimen/trans_10px"
+            android:layout_marginLeft="@dimen/trans_10px"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/activity_introduce_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动简介"
+            android:textSize="@dimen/text_trans_32px"
+            android:textColor="@color/trans_333333"
+            android:layout_below="@id/activity_img"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_20px"
+            />
+
+        <TextView
+            android:id="@+id/activity_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购新品满1000元减50元"
+            android:textSize="@dimen/text_trans_27px"
+            android:textColor="@color/grey_9f"
+            android:layout_below="@id/activity_introduce_title"
+            android:layout_marginLeft="@dimen/trans_35px"
+            android:layout_marginTop="@dimen/trans_15px"
+            android:layout_marginRight="@dimen/trans_35px"
+            />
+
+        <TextView
+            android:id="@+id/fg_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cutOffRule"
+            android:layout_below="@id/activity_introduce"
+            android:layout_marginTop="@dimen/trans_25px"
+            />
+        <RelativeLayout
+            android:id="@+id/search_detail_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看详情"
+                android:textSize="@dimen/text_trans_27px"
+                android:textColor="@color/moreText"
+                android:layout_marginLeft="@dimen/trans_35px"
+                android:layout_marginTop="@dimen/trans_20px"
+                android:layout_marginBottom="@dimen/trans_20px"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_return_meaage"
+                android:layout_marginRight="@dimen/trans_20px"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

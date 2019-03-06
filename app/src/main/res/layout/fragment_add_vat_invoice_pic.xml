@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/after_sale_apply_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/trans_25px">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/trans_20px"
+                    android:layout_marginRight="@dimen/trans_100px"
+                    android:layout_marginBottom="@dimen/trans_50px"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_trans_22px"
+                    android:text="注：资质扫描件需加盖公章，最多上传2张。仅支持jpg、jpeg、png、bmp格式，单张不超过5M。"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请上传资质文件"
+                    android:textColor="@color/font_grey"
+                    android:textSize="@dimen/text_trans_27px"
+                    android:layout_marginBottom="@dimen/trans_35px"/>
+                <com.yzs.imageshowpickerview.ImageShowPickerView
+                    android:id="@+id/it_picker_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:is_show_del="true"
+                    android:layout_marginRight="@dimen/trans_20px"/>
+
+            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/trans_45px">
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:textColor="@color/checkGreenColor"
+            android:textSize="@dimen/text_trans_27px"
+            android:background="@drawable/btn_green_large"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
