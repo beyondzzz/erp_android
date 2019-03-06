@@ -112,7 +112,7 @@ public class MessageSettingsActivity extends Activity{
         customerServiceWebview.addJavascriptInterface(new DemoJavaScriptInterface(), "demo");
 
 
-        customerServiceWebview.loadUrl("http://117.158.178.202:8000/qiqiim-server/loginMoberl?account="+userPhone);
+        customerServiceWebview.loadUrl(AppFinal.BASE_IP+":8000/qiqiim-server/loginMoberl?account="+userPhone);
         //customerServiceWeb.loadUrl("http://117.158.178.202:8000/JLMIS/junlin/mis_jsp/webview/address.jsp?userId=22");
     }
 

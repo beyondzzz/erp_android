@@ -193,14 +193,12 @@ public class CustomerServiceActivity extends Activity {
 
         customerServiceWeb.setDownloadListener(new MyWebViewDownLoadListener());
 
-
         customerServiceWeb.addJavascriptInterface(new DemoJavaScriptInterface(), "demo");
-
 
         //customerServiceWeb.loadUrl("http://117.158.178.202:8000/qiqiim-server/loginMoberl?account="+userPhone);
         //customerServiceWeb.loadUrl("http://117.158.178.202:8000/Kf/chat.html");
         //customerServiceWeb.loadUrl("http://172.16.8.39:8080/Kf/chat.html");
-         customerServiceWeb.loadUrl("http://117.158.178.202:8004/JLKF/chatClient?loginName="+userPhone+"&userName="+userName+"&isVip="+isVip+"&clientId="+userId+"");
+         customerServiceWeb.loadUrl(AppFinal.BASEURL_JLKF+"chatClient?loginName="+userPhone+"&userName="+userName+"&isVip="+isVip+"&clientId="+userId+"");
         //customerServiceWeb.loadUrl("http://172.16.8.42:8080/chatClient?loginName=1&userName=1&isVip=1&clientId=5");
         //customerServiceWeb.loadUrl("https://172.16.8.42:8443/chat.jsp");
     }

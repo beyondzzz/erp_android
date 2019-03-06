@@ -19,6 +19,8 @@ public class AppFinal {
     public static final String NET_ERROR = "网络错误";
     public static final String T_NET_CON_FAIL = "网络连接失败";
     public static final String BASEURL = "http://47.93.58.195:8080/JLMIS/";
+    public static final String BASE_IP = "http://47.93.58.195";
+    public static final String BASEURL_JLKF = "http://47.93.58.195:8080/JLKF/";
     //public static final String BASEURL = "http://172.16.8.39:8080/JLMIS/";
 
     public static final String APKURL = "http://47.93.58.195:8080/jlapk/jlfood.apk";
