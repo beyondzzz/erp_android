@@ -123,7 +123,7 @@ public class Fragment_FirstPages extends Fragment implements View.OnClickListene
 
     int promotionAdId = -1;//火热促销广告id
     int newGoodsAdId = -1;//新品上架广告id
-    int hotSaleAdId = -1;//食讯帮热卖广告id
+    int hotSaleAdId = -1;//百度热卖广告id
     int preSaleAdId = -1;//爆品预售广告id
     int flashSaleAdId = -1;//限时抢购广告id
     public static int flashSaleGoodsId =-1;//限时抢购商品id
@@ -224,7 +224,7 @@ public class Fragment_FirstPages extends Fragment implements View.OnClickListene
 
         promotionAdId = -1;//火热促销广告id
         newGoodsAdId = -1;//新品上架广告id
-        hotSaleAdId = -1;//食讯帮热卖广告id
+        hotSaleAdId = -1;//百度热卖广告id
         preSaleAdId = -1;//爆品预售广告id
         flashSaleAdId = -1;//限时抢购广告id
         flashSaleGoodsId =-1;//限时抢购商品id
@@ -361,10 +361,10 @@ public class Fragment_FirstPages extends Fragment implements View.OnClickListene
                     startActivity(intent);
                 }
                 break;
-            case R.id.ad_hot_sale://食讯帮热卖
+            case R.id.ad_hot_sale://百度热卖
                 //                Toast.makeText(getActivity(), "" + hotSaleAdId, Toast.LENGTH_SHORT).show();
                 intent = new Intent(getActivity(), NoSortGoodsListActivity.class);
-                intent.putExtra("title","食讯帮热卖");
+                intent.putExtra("title","百度热卖");
                 intent.putExtra("advertisementInformationId",hotSaleAdId);
                 startActivity(intent);
                 break;
@@ -736,7 +736,7 @@ public class Fragment_FirstPages extends Fragment implements View.OnClickListene
                                                 });
 
                                         break;
-                                    case "食讯帮热卖":
+                                    case "百度热卖":
                                         hotSaleAdId = id;
                                         Glide
                                                 .with(getActivity())

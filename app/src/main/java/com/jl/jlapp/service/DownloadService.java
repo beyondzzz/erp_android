@@ -14,15 +14,11 @@ import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
-
 import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.SDCardUtils;
-import com.google.gson.Gson;
 import com.jl.jlapp.R;
 import com.jl.jlapp.mvp.activity.ScreenActivity;
-import com.jl.jlapp.mvp.activity.SettingsActivity;
 import com.jl.jlapp.mvp.base.MyApplication;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

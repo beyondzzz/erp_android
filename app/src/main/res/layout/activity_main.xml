@@ -157,7 +157,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="食讯帮热卖"
+                        android:text="百度热卖"
                         android:textSize="@dimen/text_trans_26px"
                         android:layout_marginTop="@dimen/trans_20px"/>
 

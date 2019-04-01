@@ -18,12 +18,12 @@ public class AppFinal {
     public static final String S_NULL = "";//空值
     public static final String NET_ERROR = "网络错误";
     public static final String T_NET_CON_FAIL = "网络连接失败";
-    public static final String BASEURL = "http://47.93.58.195:8080/JLMIS/";
-    public static final String BASE_IP = "http://47.93.58.195";
-    public static final String BASEURL_JLKF = "http://47.93.58.195:8080/JLKF/";
+    public static final String BASEURL = "http://39.105.115.214:8080/JLMIS/";
+    public static final String BASE_IP = "http://39.105.115.214";
+    public static final String BASEURL_JLKF = "http://39.105.115.214:8002/JLKF/";
     //public static final String BASEURL = "http://172.16.8.39:8080/JLMIS/";
 
-    public static final String APKURL = "http://47.93.58.195:8080/jlapk/jlfood.apk";
+    public static final String APKURL = "http://39.105.115.214:8080/jlapk/jlfood.apk";
 
 
     public static final int ERR_SUCCESS = 0;

@@ -187,7 +187,7 @@ public class AddVatInvoicePicFragment extends Fragment {
             // 自定义对话框。
 //            AlertDialog.newBuilder(getActivity())
 //                    .setTitle("请求权限")
-//                    .setMessage("\"食讯帮\"申请使用相机及图库权限，您是否允许？")
+//                    .setMessage("\"百度\"申请使用相机及图库权限，您是否允许？")
 //                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
 //                        @Override
 //                        public void onClick(DialogInterface dialog, int which) {

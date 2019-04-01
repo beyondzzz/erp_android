@@ -162,7 +162,7 @@ public class UnderlineActivity extends AppCompatActivity implements View.OnClick
         String title[] = {"订单号：", "待支付金额：", "收款人：", "开户行：", "账号："};
         //邮费到付
         if (postagePayType==1){
-            String s[] = {orderNo, "¥" + payMoney+"(订单超出配送范围，运费货到付款)", "北京食讯帮发展有限公司", "中国光大银行股份有限公司北京清华园支行", "35360188000020130"};
+            String s[] = {orderNo, "¥" + payMoney+"(订单超出配送范围，运费货到付款)", "北京百度发展有限公司", "中国光大银行股份有限公司北京清华园支行", "35360188000020130"};
             for (int i = 0; i < title.length; i++) {
                 Evaluate model = new Evaluate();
                 model.setTitle(title[i]);
@@ -174,7 +174,7 @@ public class UnderlineActivity extends AppCompatActivity implements View.OnClick
             submitBtnClick();
         }
         else{
-            String s[] = {orderNo, "¥" + payMoney, "北京食讯帮发展有限公司", "中国光大银行股份有限公司北京清华园支行", "35360188000020130"};
+            String s[] = {orderNo, "¥" + payMoney, "北京百度发展有限公司", "中国光大银行股份有限公司北京清华园支行", "35360188000020130"};
             for (int i = 0; i < title.length; i++) {
                 Evaluate model = new Evaluate();
                 model.setTitle(title[i]);
@@ -230,7 +230,7 @@ public class UnderlineActivity extends AppCompatActivity implements View.OnClick
                                 if (code1 == 200) {
                                     picUrlList = new ArrayList<>();
                                     picUrlList = imgUploadModel.getResultData();
-                                    Net.get().insertOfflinePayment(orderNo, userId, remitterName, remitterAccount, "食讯帮", "621288XXXXXXXXXXX", "中国工商银行积水潭支行", payMoney, picUrlList).subscribeOn(Schedulers.io())
+                                    Net.get().insertOfflinePayment(orderNo, userId, remitterName, remitterAccount, "百度", "621288XXXXXXXXXXX", "中国工商银行积水潭支行", payMoney, picUrlList).subscribeOn(Schedulers.io())
                                             .observeOn(AndroidSchedulers.mainThread())
                                             .subscribe(postModel -> {
                                                 cancelProgressDialog();
@@ -444,7 +444,7 @@ public class UnderlineActivity extends AppCompatActivity implements View.OnClick
             // 自定义对话框。
 //            AlertDialog.newBuilder(UnderlineActivity.this)
 //                    .setTitle("请求权限")
-//                    .setMessage("\"食讯帮\"申请使用相机及图库权限，您是否允许？")
+//                    .setMessage("\"百度\"申请使用相机及图库权限，您是否允许？")
 //                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
 //                        @Override
 //                        public void onClick(DialogInterface dialog, int which) {
